@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+  </head>
+
+  <body>
+    <a-scene>
+      <a-assets>
+        <img id="MLPortrait" src="test.png">
+        <a-light type="ambient" color="#222"></a-light>
+      </a-assets><a-assets>
+        <a-cubemap id="pisa">
+        <img src="https://threejs.org/examples/textures/cube/pisa/px.png">
+        <img src="https://threejs.org/examples/textures/cube/pisa/nx.png">
+        <img src="https://threejs.org/examples/textures/cube/pisa/py.png">
+        <img src="https://threejs.org/examples/textures/cube/pisa/ny.png">
+        <img src="https://threejs.org/examples/textures/cube/pisa/pz.png">
+        <img src="https://threejs.org/examples/textures/cube/pisa/nz.png">
+        </a-cubemap>
+      </a-assets>
+      
+      <a-light type="probe" envMap="#pisa"></a-light>
+
+      <a-image src="#MLPortrait" width="16" height="9" position="0 0 -6"></a-image>
+    </a-scene>
+  </body>
+</html>
